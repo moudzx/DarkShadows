@@ -68,6 +68,7 @@ let directionMap = {
 
 
 document.addEventListener("keydown", event => {
+    if (event.repeat) return;
     if (event.key in directionMap){
         velocity = velocity.add(directionMap[event.key]);
     }
